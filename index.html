@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="web icon" href="img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+
+        <div class="container">
+            <div class="caixa">
+
+                <div class="row">
+                    <div id="tit" class="col-12 text-center mt-2 mb-4">
+                        <h3>Confira seu IMC</h3>
+                    </div>
+                </div>
+
+
+                <form id="formDados" onsubmit="calcIMC(event)"> <!--substitui o action como se fosse o php -->
+
+                    <div class="form-group">
+                        <label for="peso">Digite seu peso:</label>
+                        <input type="number" class="form-control" id="peso" name="peso" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="altura">Digite sua altura:</label>
+                        <input type="number" class="form-control" id="altura" name="altura" step="0.01" required>
+                    </div>
+
+
+                    <br>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block d-block mx-auto mb-3"
+                            style="background-color: #000000;">Resultado</button>
+                    </div>
+
+
+
+
+                </form>
+
+                <div id="mostrarResult" class="hidden">
+                    <div class="text-center mt-5 mb-5">
+                        <h2 id="txtIndic"></h2>
+                        <div class="text-center mt-5 mb-5">
+                            <h3 id="resultado"></h3>
+                        </div>
+                        <div class="text-center mt-5 mb-5">
+                            <h5 id="txtApoio"></h5>
+
+                            <button class="btn btn-primary btn-block d-block mx-auto mt-5 mb-5"
+                                style="background-color: #000000;" onclick="showForm()">Voltar</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
